@@ -10,14 +10,14 @@
     "id": 1,
     "name": "Lambo",
     "motto" : "No life is worth living if we cannot be true to our nature.",
-    "img_url": "https://i.imgur.com/PDLZEjV.jpg"
+    "img_url": "https://i.imgur.com/PDLZEjV.jpg",
     "job": "Instructor at Nest Education High School",
   },
   {
     "id": 2,
     "name": "Bayalagmaa",
     "motto": "Peace begins with smile", 
-    "img_url": "https://i.imgur.com/cqMZtKD.jpg"
+    "img_url": "https://i.imgur.com/cqMZtKD.jpg",
     "job": "Instructor and Physical education trainer at Nest Education High School"
   },
   {
