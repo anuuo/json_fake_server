@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JSON</title>
+        <link rel="stylesheet" href=" json_multiple_profiles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+<body>
+    <script>
+    
+        function change(x){
+
+            fetch('https://my-json-server.typicode.com/anuuo/json_fake_server/db')
+            .then(response => response.json())
+            .then(data => {
+                // data is now parsed JSON
+                document.getElementById("pic").innerHTML = "<img src = '" + data.users[x].img_url + "' class = 'frame'/>"  
+                    
+                document.getElementById("Name").innerHTML =  
+                data.users[x].name + "\'s  Profile" + "<br>";
+                
+                document.getElementById("nick").innerHTML = 
+                "Nickname : " + data.users[x].nickName + "<br>";
+                
+                document.getElementById("Motto").innerHTML =
+                "Life Motto: " + data.users[x].motto + "<br>";
+
+                document.getElementById("Job").innerHTML =
+                "Proffesion: " + data.users[x].job + "<br>";
+            });
+        }
+    </script>
+
+    <div id = "center">
+        <input type = "button" value = "Anu" onclick = "change(0)" />
+        <input type = "button" value = "Lambo" onclick = "change(1)" />
+        <input type = "button" value = "Bayalagmaa" onclick = "change(2)" />
+        <input type = "button" value = "Tugsuu" onclick = "change(3)" />
+    </div>
+    <div id = "personal_info" class = "clearfix">
+        <div id = "pic"></div>
+        <h2 id = "Name"></h2>
+        <p id = "nick" ></p>
+        <p id = "Motto"></p>
+        <p id = "Job"></p>
+    </div>
+</body>
+</html>
